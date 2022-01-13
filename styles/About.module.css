@@ -1,0 +1,33 @@
+.aboutContainer {
+  padding-top: 3rem;
+}
+
+.aboutDetails h1 {
+  font-size: 2.7rem;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.aboutDetails__text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.aboutDetails__text p {
+  color: rgb(51, 51, 51);
+}
+
+.membersHeader {
+  font-size: 2.7rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.membersCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}

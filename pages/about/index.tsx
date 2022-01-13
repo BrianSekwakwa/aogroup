@@ -1,10 +1,128 @@
 import React from "react";
 import type { NextPage } from "next";
+import { Helmet } from "react-helmet";
+
+import Layout from "../../components/Layout/Layout";
+import Navigation from "../../components/Navigation/Navigation";
+import Footer from "../../components/Footer/Footer";
+import AboutHeader from "../../components/AboutHeader/AboutHeader";
+import styles from "../../styles/About.module.css";
+import ImageCard from "../../components/ImageCard/ImageCard";
 
 const index: NextPage = () => {
   return (
     <div>
-      <div>Hello There I am ninjas</div>
+      <Helmet>
+        <title>About</title>
+        <meta name="description" content="Helmet application" />
+        <link rel="icon" href="/favicon.ico" />
+      </Helmet>
+
+      <Navigation />
+      <AboutHeader />
+
+      {/* About Us Details */}
+      <section>
+        <Layout>
+          <div className={styles.aboutContainer}>
+            <div className={styles.aboutDetails}>
+              <h1>A little bit about our journey...</h1>
+              <div className={styles.aboutDetails__text}>
+                <p>
+                  Established 5 years ago. AO is proud to call South Africa
+                  home, but also thankful for our ability to serve customers
+                  globally in over 14 different countries. We also have offices
+                  in Mauritius and Kenya which gives us a wealth of knowledge
+                  and a competitive edge about understanding different markets.
+                  <br />
+                  <br />
+                  Our vision is to solve business problems, especially with
+                  SMMEs and in the financial services sector. We see ourselves
+                  as an extension of your team and when working with us you get
+                  a dedicated account manager and access to a team of experts in
+                  all available fields.
+                </p>
+                <p>
+                  We are passionate about technology. The type of obsession that
+                  makes you crave more, want to do better, and get the best out
+                  of a new feature, design, or software. We aim to help build
+                  companies and brands that will be remembered - for the right
+                  reasons! Whether we use our strategy, building new software or
+                  marketing a business using technology.
+                  <br />
+                  <br />
+                  We’re the company that other companies call when they are in a
+                  tight spot.
+                  <br />
+                  <br />
+                  <strong>SO, THIS IS US. HELLO, FROM ALL OF US AT AO.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </Layout>
+      </section>
+
+      {/* The Team*/}
+      <section>
+        <Layout>
+          <div className={styles.membersContainer}>
+            <h1 className={styles.membersHeader}>Meet The Team.</h1>
+            <div className={styles.membersCardContainer}>
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Pieter Du Toit",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Roelof Peens",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Adel Robertson",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Paul Von Zeuner",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Aniska Berry",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+              <ImageCard
+                options={{
+                  imagePath: "/images/cardimages/image1.jpg",
+                  title: "Nishara Singh",
+                  paragraph:
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
+                }}
+              />
+            </div>
+          </div>
+        </Layout>
+      </section>
+
+      <Footer />
     </div>
   );
 };
