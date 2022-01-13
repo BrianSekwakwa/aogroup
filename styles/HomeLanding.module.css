@@ -1,0 +1,55 @@
+.headerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 500px;
+}
+
+.elevateContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 500px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.detailsContainer h1 {
+  font-size: 2.3rem;
+  margin: 0;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.detailsContainer p {
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.teamContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 500px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.servicesHeader {
+  font-size: 2.3rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: rgb(51, 51, 51);
+}
+
+.servicesCardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
