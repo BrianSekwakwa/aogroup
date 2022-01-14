@@ -17,7 +17,12 @@ export default function Navigation() {
         <Layout>
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              <Image src="/images/logo-2.png" width={70} height={40} />
+              <Image
+                src="/images/logo-2.png"
+                width={70}
+                height={40}
+                alt="company logo"
+              />
             </Typography>
             <Button color="inherit">
               <Link href="/">Home</Link>

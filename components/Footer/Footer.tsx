@@ -31,7 +31,12 @@ const Footer: NextPage = () => {
         <div className={styles.footerDetails}>
           <div>
             <div className={styles.footerDetails__logo}>
-              <Image src="/images/logo-2.png" width={120} height={70} />
+              <Image
+                src="/images/logo-2.png"
+                width={120}
+                height={70}
+                alt="company logo"
+              />
             </div>
             <p className={styles.footerDetails__text}>
               The only digital marketing and software development company who

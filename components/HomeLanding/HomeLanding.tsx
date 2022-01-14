@@ -19,16 +19,20 @@ function HomeLanding() {
               <p>
                 What does your business need to succeed? We have all the tips,
                 tricks and technology up our sleeve to make your clients think
-                you’re the bee’s knees. With every marketing effort, we keep
-                this in mind. SEO, social media, paid media advertising and
-                content creation are all ways to ensure your brand’s message
-                reaches the ideal target audience at the right time. Our aim is
-                to create a sales spike, while we build your brand on a
+                you are the best at what you do. With every marketing effort, we
+                keep this in mind. SEO, social media, paid media advertising and
+                content creation are all ways to ensure your brand has a message
+                that reaches the ideal target audience at the right time. Our
+                aim is to create a sales spike, while we build your brand on a
                 rock-solid foundation.
               </p>
             </div>
             <div className={styles.imageContainer}>
-              <Image src="/images/mountain_edit_02.jpg" layout="fill" />
+              <Image
+                src="/images/mountain_edit_02.jpg"
+                layout="fill"
+                alt="mountain range"
+              />
             </div>
           </div>
         </Layout>
@@ -38,15 +42,19 @@ function HomeLanding() {
         <Layout>
           <div className={styles.teamContainer}>
             <div className={styles.imageContainer}>
-              <Image src="/images/mountain_edit03.jpg" layout="fill" />
+              <Image
+                src="/images/mountain_edit03.jpg"
+                layout="fill"
+                alt="mountain range"
+              />
             </div>
             <div className={styles.detailsContainer}>
               <h1>We Become A Part Of Your Team</h1>
               <p>
-                Transparency. Innovation. Collaboration. We’re part of your
-                team, and you’re part of ours! As a client, you’ll have full
-                access to our market software to view campaign performance.
-                You’re always welcome to be part of our daily internal Stand-Up
+                Transparency. Innovation. Collaboration. We are part of your
+                team, and you are part of ours! As a client, you will have full
+                access to our market software to view campaign performance. You
+                are always welcome to be part of our daily internal Stand-Up
                 meetings and to enjoy bottomless coffee and support at our
                 offices.
               </p>

@@ -23,11 +23,11 @@ const index: NextPage = () => {
           <div className={styles.contactDetails}>
             <div className={styles.contactDetails__leftSection}>
               <h1 className={styles.contactDetails__header}>
-                LET'S GET CONNECTED!
+                {`LET'S GET CONNECTED!`}
               </h1>
               <p className={styles.contactDetails__text}>
-                The ‘Contact Us’ page should be the most visited page on your
-                website. If it’s not… You should get in touch with us NOW!
+                {`The "Contact Us" page should be the most visited page on your
+                website. If it is not… You should get in touch with us NOW!`}
               </p>
             </div>
             <div>

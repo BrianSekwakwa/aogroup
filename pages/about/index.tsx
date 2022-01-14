@@ -51,8 +51,8 @@ const index: NextPage = () => {
                   marketing a business using technology.
                   <br />
                   <br />
-                  We’re the company that other companies call when they are in a
-                  tight spot.
+                  We are the company that other companies call when they are in
+                  a tight spot.
                   <br />
                   <br />
                   <strong>SO, THIS IS US. HELLO, FROM ALL OF US AT AO.</strong>
