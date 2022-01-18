@@ -13,6 +13,7 @@ function HomeHeader() {
         objectFit="cover"
         objectPosition="center"
         className={styles.imageCover}
+        alt="business person"
       />
       <h1 className={styles.headerTitle}>Your Trusted Partner In Business.</h1>
       <p className={styles.headerLeadText}>

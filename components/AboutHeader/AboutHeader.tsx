@@ -14,6 +14,7 @@ function AboutHeader() {
         objectFit="cover"
         objectPosition="center"
         className={styles.imageCover}
+        alt="business computer"
       />
       <h1 className={styles.aboutTitle}>MARKETING THAT DRIVES SALES</h1>
       <p className={styles.aboutLeadText}>

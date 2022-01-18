@@ -17,7 +17,7 @@
 .footerDetails__counter {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: column !important;
   color: #fff;
 }
 

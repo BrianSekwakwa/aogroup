@@ -26,6 +26,7 @@ const index: NextPage = () => {
           objectFit="cover"
           objectPosition="center"
           className={styles.imageCover}
+          alt="clouds"
         />
         <Layout>
           <Grid container spacing={3} className={styles.contactDetails}>
