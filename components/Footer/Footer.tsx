@@ -11,6 +11,7 @@ import ButtonGroup from "@mui/material/ButtonGroup";
 import styles from "../../styles/Footer.module.css";
 import Layout from "../Layout/Layout";
 import exampleContext from "../../context/ExampleStateFolder/exampleContext";
+import { Grid } from "@mui/material";
 
 const Footer: NextPage = () => {
   const { counter, increaseCounter, decreaseCounter } =
@@ -28,8 +29,8 @@ const Footer: NextPage = () => {
   return (
     <footer className={styles.footerContainer}>
       <Layout>
-        <div className={styles.footerDetails}>
-          <div>
+        <Grid container className={styles.footerDetails}>
+          <Grid item xs={12} sm={8} md={8}>
             <div className={styles.footerDetails__logo}>
               <Image
                 src="/images/logo-2.png"
@@ -48,8 +49,14 @@ const Footer: NextPage = () => {
               <TwitterIcon fontSize="large" sx={{ color: "white" }} />
               <FacebookIcon fontSize="large" sx={{ color: "white" }} />
             </div>
-          </div>
-          <div className={styles.footerDetails__counter}>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            md={4}
+            className={styles.footerDetails__counter}
+          >
             <div className={styles.footerDetails__counter__display}>
               {counter}
             </div>
@@ -60,8 +67,8 @@ const Footer: NextPage = () => {
               <Button onClick={decrease}>Decrease</Button>
             </ButtonGroup>
             <p>Context API Counter</p>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
         <Divider style={{ backgroundColor: "white" }} />
         <div className={styles.footerDetails__copyright}>
           &#169; Copyright 2020 AO Group. All Rights Reserved.

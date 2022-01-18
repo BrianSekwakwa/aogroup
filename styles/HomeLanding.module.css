@@ -1,13 +1,5 @@
-.headerContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 500px;
-}
-
-.elevateContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 500px;
+.gridContainer {
+  min-height: 500px;
 }
 
 .detailsContainer {
@@ -30,14 +22,13 @@
   color: rgb(51, 51, 51);
 }
 
-.teamContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  height: 500px;
-}
-
 .imageContainer {
   position: relative;
+  min-height: 500px;
+}
+
+#secondImage {
+  display: none;
 }
 
 .servicesHeader {
@@ -49,7 +40,28 @@
 }
 
 .servicesCardContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 900px) {
+  #firstImage {
+    display: none;
+  }
+  #secondImage {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .servicesHeader {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  .servicesCardContainer {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }

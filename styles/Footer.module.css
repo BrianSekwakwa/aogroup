@@ -4,12 +4,6 @@
   padding-top: 5rem;
 }
 
-.footerDetails {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-}
-
 .footerDetails__text {
   color: #fff;
   margin-top: 2rem;
@@ -22,7 +16,6 @@
 
 .footerDetails__counter {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   color: #fff;
@@ -37,4 +30,13 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #fff;
+  text-align: center;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1200px) {
+  .footerDetails {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

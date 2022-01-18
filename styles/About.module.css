@@ -2,16 +2,10 @@
   padding-top: 3rem;
 }
 
-.aboutDetails h1 {
+.aboutDetails__header {
   font-size: 2.7rem;
   text-align: center;
   color: rgb(51, 51, 51);
-}
-
-.aboutDetails__text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
 }
 
 .aboutDetails__text p {
@@ -27,7 +21,25 @@
 }
 
 .membersCardContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .membersHeader {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .aboutDetails__text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .membersCardContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

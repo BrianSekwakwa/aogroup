@@ -4,13 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
-  background-image: url("/images/cardimages/image6.jpg");
   background-color: rgba(9, 9, 41, 0.5);
-  background-blend-mode: overlay;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
 }
 
 .aboutTitle {
@@ -37,4 +34,15 @@
 
 .aboutButton:hover {
   background-color: rgb(255, 94, 35);
+}
+
+.imageCover {
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .aboutContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

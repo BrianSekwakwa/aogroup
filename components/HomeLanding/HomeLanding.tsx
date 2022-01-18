@@ -4,6 +4,7 @@ import HomeHeader from "../HomeHeader/HomeHeader";
 import Layout from "../Layout/Layout";
 import styles from "../../styles/HomeLanding.module.css";
 import ImageCard from "../ImageCard/ImageCard";
+import { Grid } from "@mui/material";
 
 function HomeLanding() {
   return (
@@ -13,8 +14,8 @@ function HomeLanding() {
       {/* Elevate your business section */}
       <section>
         <Layout>
-          <div className={styles.elevateContainer}>
-            <div className={styles.detailsContainer}>
+          <Grid container className={styles.gridContainer}>
+            <Grid item xs={12} md={6} className={styles.detailsContainer}>
               <h1>We Can Help You Elevate Your Business</h1>
               <p>
                 What does your business need to succeed? We have all the tips,
@@ -26,29 +27,37 @@ function HomeLanding() {
                 aim is to create a sales spike, while we build your brand on a
                 rock-solid foundation.
               </p>
-            </div>
-            <div className={styles.imageContainer}>
+            </Grid>
+            <Grid item xs={12} md={6} className={styles.imageContainer}>
               <Image
                 src="/images/mountain_edit_02.jpg"
                 layout="fill"
+                objectFit="cover"
+                objectPosition="center"
                 alt="mountain range"
               />
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </Layout>
       </section>
       {/* Part of the team section */}
       <section>
         <Layout>
-          <div className={styles.teamContainer}>
-            <div className={styles.imageContainer}>
+          <Grid container className={styles.gridContainer}>
+            <Grid
+              id={styles.firstImage}
+              item
+              xs={12}
+              md={6}
+              className={styles.imageContainer}
+            >
               <Image
                 src="/images/mountain_edit03.jpg"
                 layout="fill"
                 alt="mountain range"
               />
-            </div>
-            <div className={styles.detailsContainer}>
+            </Grid>
+            <Grid item xs={12} md={6} className={styles.detailsContainer}>
               <h1>We Become A Part Of Your Team</h1>
               <p>
                 Transparency. Innovation. Collaboration. We are part of your
@@ -58,17 +67,29 @@ function HomeLanding() {
                 meetings and to enjoy bottomless coffee and support at our
                 offices.
               </p>
-            </div>
-          </div>
+            </Grid>
+            <Grid
+              id={styles.secondImage}
+              item
+              xs={12}
+              md={6}
+              className={styles.imageContainer}
+            >
+              <Image
+                src="/images/mountain_edit03.jpg"
+                layout="fill"
+                alt="mountain range"
+              />
+            </Grid>
+          </Grid>
         </Layout>
       </section>
       {/* What we do section */}
       <section>
         <Layout>
-          <div>
-            <h1 className={styles.servicesHeader}>What We Can Do For You.</h1>
-            <div className={styles.servicesCardContainer}>
-              {/* Image Cards go here */}
+          <h1 className={styles.servicesHeader}>What We Can Do For You.</h1>
+          <Grid container spacing={4} className={styles.servicesCardContainer}>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image1.jpg",
@@ -77,6 +98,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
+            </Grid>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image2.jpg",
@@ -85,6 +108,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
+            </Grid>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image3.jpg",
@@ -93,6 +118,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
+            </Grid>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image4.jpg",
@@ -101,6 +128,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
+            </Grid>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image5.jpg",
@@ -109,6 +138,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
+            </Grid>
+            <Grid item>
               <ImageCard
                 options={{
                   imagePath: "/images/cardimages/image6.jpg",
@@ -117,8 +148,8 @@ function HomeLanding() {
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam turpis erat, posuere eget rhoncus eu, feugiat a ipsum. Duis sollicitudin ante sed tortor rhoncus, a suscipit quam porta",
                 }}
               />
-            </div>
-          </div>
+            </Grid>
+          </Grid>
         </Layout>
       </section>
     </div>

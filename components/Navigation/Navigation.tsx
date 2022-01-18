@@ -1,41 +1,51 @@
 import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
 
 import Layout from "../Layout/Layout";
 import styles from "../../styles/Navigation.module.css";
 
 export default function Navigation() {
   return (
-    <Box>
-      <AppBar position="fixed" className={styles.navigation}>
+    <nav>
+      <div className={styles.navigation}>
         <Layout>
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <div className={styles.navigationBar}>
+            <span className={styles.navigationLogo}>
               <Image
                 src="/images/logo-2.png"
                 width={70}
                 height={40}
                 alt="company logo"
               />
-            </Typography>
-            <Button color="inherit">
-              <Link href="/">Home</Link>
-            </Button>
-            <Button color="inherit">
-              <Link href="/about">About</Link>
-            </Button>
-            <Button color="inherit">
-              <Link href="/contact">Contact</Link>
-            </Button>
-          </Toolbar>
+            </span>
+            <ul className={styles.navigationLinks}>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+            <div className={styles.navigationMenuIcon}>
+              <IconButton
+                size="large"
+                edge="start"
+                color="secondary"
+                aria-label="menu"
+                sx={{ mr: 2, color: "#fff" }}
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
+          </div>
         </Layout>
-      </AppBar>
-    </Box>
+      </div>
+    </nav>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -11,12 +12,9 @@ function ImageCard({ options }: any) {
   return (
     <div>
       <Card sx={{ maxWidth: 345 }}>
-        <CardMedia
-          component="img"
-          height="200"
-          image={imagePath}
-          alt="card image"
-        />
+        <div style={{ position: "relative", width: "100%", height: "200px" }}>
+          <Image src={imagePath} layout="fill" objectFit="cover" />
+        </div>
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
             {title}
