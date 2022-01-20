@@ -19,12 +19,12 @@ function Testimonials() {
       >
         <SplideSlide>
           <p className={styles.testimonialsDetails}>
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            {`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             culpa reiciendis consectetur nihil voluptatibus soluta ab laudantium
             mollitia, iste tenetur dolorem quod eligendi, cumque eius dolor
             inventore velit. Iusto qui in necessitatibus a porro, recusandae
             nesciunt eaque, veniam laborum perferendis itaque quae aliquam nobis
-            debitis quibusdam, soluta quisquam sed! Non? "
+            debitis quibusdam, soluta quisquam sed! Non?"`}
           </p>
           <p className={styles.testimonialsAuthor}>
             Bill Gates - CEO of Microsoft
@@ -32,23 +32,23 @@ function Testimonials() {
         </SplideSlide>
         <SplideSlide>
           <p className={styles.testimonialsDetails}>
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            {`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             culpa reiciendis consectetur nihil voluptatibus soluta ab laudantium
             mollitia, iste tenetur dolorem quod eligendi, cumque eius dolor
             inventore velit. Iusto qui in necessitatibus a porro, recusandae
             nesciunt eaque, veniam laborum perferendis itaque quae aliquam nobis
-            debitis quibusdam, soluta quisquam sed! Non? "
+            debitis quibusdam, soluta quisquam sed! Non?"`}
           </p>
           <p className={styles.testimonialsAuthor}>Elon Musk - CEO of Tesla</p>
         </SplideSlide>
         <SplideSlide>
           <p className={styles.testimonialsDetails}>
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            {`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             culpa reiciendis consectetur nihil voluptatibus soluta ab laudantium
             mollitia, iste tenetur dolorem quod eligendi, cumque eius dolor
             inventore velit. Iusto qui in necessitatibus a porro, recusandae
             nesciunt eaque, veniam laborum perferendis itaque quae aliquam nobis
-            debitis quibusdam, soluta quisquam sed! Non? "
+            debitis quibusdam, soluta quisquam sed! Non?"`}
           </p>
           <p className={styles.testimonialsAuthor}>
             Jeff Bezos - CEO of Amazon
@@ -56,12 +56,12 @@ function Testimonials() {
         </SplideSlide>
         <SplideSlide>
           <p className={styles.testimonialsDetails}>
-            " Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+            {`"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
             culpa reiciendis consectetur nihil voluptatibus soluta ab laudantium
             mollitia, iste tenetur dolorem quod eligendi, cumque eius dolor
             inventore velit. Iusto qui in necessitatibus a porro, recusandae
             nesciunt eaque, veniam laborum perferendis itaque quae aliquam nobis
-            debitis quibusdam, soluta quisquam sed! Non? "
+            debitis quibusdam, soluta quisquam sed! Non?"`}
           </p>
           <p className={styles.testimonialsAuthor}>
             Mark Zuckerberg - CEO of Meta

@@ -3,7 +3,6 @@ import Image from "next/image";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
@@ -13,7 +12,12 @@ function ImageCard({ options }: any) {
     <div>
       <Card sx={{ maxWidth: 345 }}>
         <div style={{ position: "relative", width: "100%", height: "200px" }}>
-          <Image src={imagePath} layout="fill" objectFit="cover" />
+          <Image
+            src={imagePath}
+            layout="fill"
+            objectFit="cover"
+            alt="card header image"
+          />
         </div>
         <CardContent>
           <Typography gutterBottom variant="h6" component="div">
