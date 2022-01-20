@@ -14,3 +14,8 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* Global Active Styles For Slider Pagination */
+.splide__pagination__page.is-active {
+  background: #673ab7 !important;
+}

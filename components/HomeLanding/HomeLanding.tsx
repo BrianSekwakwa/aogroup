@@ -5,6 +5,7 @@ import Layout from "../Layout/Layout";
 import styles from "../../styles/HomeLanding.module.css";
 import ImageCard from "../ImageCard/ImageCard";
 import { Grid } from "@mui/material";
+import Testimonials from "../Testimonials/Testimonials";
 
 function HomeLanding() {
   return (
@@ -34,7 +35,7 @@ function HomeLanding() {
                 layout="fill"
                 objectFit="cover"
                 objectPosition="center"
-                alt="mountain range"
+                alt="Mountain Peak"
               />
             </Grid>
           </Grid>
@@ -54,7 +55,9 @@ function HomeLanding() {
               <Image
                 src="/images/mountain_edit03.jpg"
                 layout="fill"
-                alt="mountain range"
+                objectFit="cover"
+                objectPosition="center"
+                alt="AO Mountain range"
               />
             </Grid>
             <Grid item xs={12} md={6} className={styles.detailsContainer}>
@@ -150,6 +153,12 @@ function HomeLanding() {
               />
             </Grid>
           </Grid>
+        </Layout>
+      </section>
+      {/* Testimonials */}
+      <section>
+        <Layout>
+          <Testimonials />
         </Layout>
       </section>
     </div>
