@@ -25,6 +25,13 @@
   justify-content: center;
 }
 
+.exampleContainer div {
+  background: #d309e1;
+  border-radius: 30px;
+  width: 150px;
+  height: 150px;
+}
+
 @media only screen and (max-width: 1200px) {
   .membersHeader {
     padding-left: 1rem;

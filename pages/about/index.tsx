@@ -1,6 +1,8 @@
 import React from "react";
 import type { NextPage } from "next";
 import { Helmet } from "react-helmet";
+import { Grid } from "@mui/material";
+import { motion } from "framer-motion";
 
 import Layout from "../../components/Layout/Layout";
 import Navigation from "../../components/Navigation/Navigation";
@@ -8,7 +10,6 @@ import Footer from "../../components/Footer/Footer";
 import AboutHeader from "../../components/AboutHeader/AboutHeader";
 import styles from "../../styles/About.module.css";
 import ImageCard from "../../components/ImageCard/ImageCard";
-import { Grid } from "@mui/material";
 
 const index: NextPage = () => {
   return (
@@ -135,6 +136,27 @@ const index: NextPage = () => {
                 />
               </Grid>
             </Grid>
+          </div>
+        </Layout>
+      </section>
+      {/* Animation Test */}
+      <section>
+        <Layout>
+          <div className={styles.exampleContainer}>
+            <motion.div
+              animate={{
+                scale: [1, 2, 2, 1, 1],
+                rotate: [0, 0, 270, 270, 0],
+                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              }}
+              transition={{
+                duration: 2,
+                ease: "easeInOut",
+                times: [0, 0.2, 0.5, 0.8, 1],
+                repeat: Infinity,
+                repeatDelay: 1,
+              }}
+            />
           </div>
         </Layout>
       </section>
