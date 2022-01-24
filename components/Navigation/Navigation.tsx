@@ -3,20 +3,58 @@ import Image from "next/image";
 import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Box, Drawer, List, ListItem, ListItemText } from "@mui/material";
 
 import Layout from "../Layout/Layout";
 import styles from "../../styles/Navigation.module.css";
-import { Menu, MenuItem } from "@mui/material";
+
+type Anchor = "left";
 
 export default function Navigation() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const [state, setState] = React.useState({
+    left: false,
+  });
+
+  const toggleDrawer =
+    (anchor: Anchor, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+
+      setState({ ...state, [anchor]: open });
+    };
+
+  const list = (anchor: Anchor) => (
+    <Box
+      sx={{ width: 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        <Link href="/">
+          <ListItem button>
+            <ListItemText primary="Home" />
+          </ListItem>
+        </Link>
+        <Link href="/about">
+          <ListItem button>
+            <ListItemText primary="About" />
+          </ListItem>
+        </Link>
+        <Link href="/contact">
+          <ListItem button>
+            <ListItemText primary="Contact" />
+          </ListItem>
+        </Link>
+      </List>
+    </Box>
+  );
 
   return (
     <nav>
@@ -43,40 +81,27 @@ export default function Navigation() {
               </li>
             </ul>
             <div className={styles.navigationMenuIcon}>
-              <IconButton
-                size="large"
-                edge="start"
-                color="secondary"
-                aria-label="menu"
-                sx={{ mr: 2, color: "#fff" }}
-                id="basic-button"
-                aria-controls={open ? "basic-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
-                onClick={handleClick}
-              >
-                <MenuIcon />
-              </IconButton>
-
-              <Menu
-                id="basic-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                MenuListProps={{
-                  "aria-labelledby": "basic-button",
-                }}
-              >
-                <MenuItem onClick={handleClose}>
-                  <Link href="/">Home</Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <Link href="/about">About</Link>
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <Link href="/contact">Contact</Link>
-                </MenuItem>
-              </Menu>
+              {(["left"] as const).map((anchor) => (
+                <React.Fragment key={anchor}>
+                  <IconButton
+                    size="large"
+                    edge="start"
+                    color="secondary"
+                    aria-label="menu"
+                    sx={{ mr: 2, color: "#fff" }}
+                    onClick={toggleDrawer(anchor, true)}
+                  >
+                    <MenuIcon />
+                  </IconButton>
+                  <Drawer
+                    anchor={anchor}
+                    open={state[anchor]}
+                    onClose={toggleDrawer(anchor, false)}
+                  >
+                    {list(anchor)}
+                  </Drawer>
+                </React.Fragment>
+              ))}
             </div>
           </div>
         </Layout>
